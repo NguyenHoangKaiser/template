@@ -8,6 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "slim" | "medium" | "large";
   fullWidth?: boolean;
   loading?: boolean;
+  // ... other props that a default button can have (onClick, disabled, etc.)
 }
 
 /**
@@ -38,9 +39,10 @@ export const Button = ({
   size = "medium",
   variant = "default",
   fullWidth,
-  disabled,
+  // disabled will not work here because it's a reserved word for the button element
   modifier,
   loading,
+  ...props // disabled, onClick, etc. are passed here to the button element
 }: ButtonProps) => {
   return (
     <button
@@ -75,9 +77,10 @@ export const Button = ({
         fullWidth && "w-full",
 
         // Disabled
-        disabled && "bg-surfaceDisabled text-textDisabled",
-        disabled && variant === "default" && " border-borderDisabled",
+        props.disabled && "bg-surfaceDisabled text-textDisabled",
+        props.disabled && variant === "default" && " border-borderDisabled",
       )}
+      {...props}
     >
       <span
         className={classNames(

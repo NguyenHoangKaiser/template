@@ -6,7 +6,13 @@ function App() {
     <>
       <PreviewPane title="Buttons like you used to build them">
         <Col title="Regular">
-          <Button>Add product</Button>
+          <Button
+            onClick={() => {
+              console.log("clicked");
+            }}
+          >
+            Add product
+          </Button>
           <Button size="slim">Add product (slim)</Button>
           <Button size="large">Add product (large)</Button>
           <Button disabled>Add product (disabled)</Button>
