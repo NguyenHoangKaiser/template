@@ -12,7 +12,7 @@
 This template uses a number of open source projects to work properly:
 
 - [ReactJS] - With TypeScript
-- [Vite Builder] - Replacement for Create React App
+- [Vite] - Replacement for Create React App
 - [TailwindCSS]
 - [ESLint]
 - [Prettier]
@@ -66,4 +66,4 @@ to discuss what you would like to change.
 [prettier]: https://prettier.io/
 [tailwindcss]: https://tailwindcss.com/
 [node.js]: http://nodejs.org
-[vite builder]: https://vitejs.dev/guide/
+[vite]: https://vitejs.dev/guide/

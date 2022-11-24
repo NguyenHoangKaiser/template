@@ -35,5 +35,7 @@ module.exports = {
   rules: {
     // Add your own rules here to override ones from the extended configs.
     "no-unused-vars": [1, { args: "after-used", argsIgnorePattern: "^_" }],
+    // This rule is turned off because it's handled by TS import.
+    "import/no-unresolved": 0,
   },
 };

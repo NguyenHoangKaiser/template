@@ -1,5 +1,5 @@
-import { Button } from "./components/Button/Button";
-import PreviewPane, { Col } from "./components/Playground/PreviewPane";
+import { Button } from "src/components/Button/Button";
+import PreviewPane, { Col } from "src/components/Playground/PreviewPane";
 
 function App() {
   return (
