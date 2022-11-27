@@ -5,9 +5,9 @@ const PreviewPane = ({
   children: React.ReactNode;
   title: string;
 }) => (
-  <div className=" border-b [&_h1]:text-2xl [&_h1]:font-bold p-8 [&_h1]:mb-8 bg-gray-100">
+  <div className=" border-b bg-gray-100 p-8 [&_h1]:mb-8 [&_h1]:text-2xl [&_h1]:font-bold">
     <h1>{title}</h1>
-    <div className="flex-row flex-wrap items-start flex">{children}</div>
+    <div className="flex flex-row flex-wrap items-start">{children}</div>
   </div>
 );
 
@@ -19,7 +19,7 @@ export const Col = ({
   title: string;
 }) => (
   <div className="w-80 p-8">
-    <h2 className="font-bold border-b mb-5">{title}</h2>
+    <h2 className="mb-5 border-b font-bold">{title}</h2>
     <div className="flex flex-col items-start space-y-3">{children}</div>
   </div>
 );

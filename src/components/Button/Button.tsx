@@ -47,23 +47,23 @@ export const Button = ({
   return (
     <button
       className={classNames(
-        "rounded-md relative",
+        "relative rounded-md",
         variant === "default" &&
-          "bg-white text-text shadow-button border hover:border-red-300 border-gray-400",
-        variant === "monochrome" && "bg-white text-text border border-gray-400",
+          "border border-gray-400 bg-white text-text shadow-button hover:border-red-300",
+        variant === "monochrome" && "border border-gray-400 bg-white text-text",
         variant === "primary" && "bg-primary text-white",
         variant === "destructive" && "bg-destructive text-white",
 
         // Modifiers
         modifier === "outline" &&
-          "bg-transparent border border-current shadow-[0_0_0_1px_currentColor]",
+          "border border-current bg-transparent shadow-[0_0_0_1px_currentColor]",
         modifier === "outline" &&
           variant === "destructive" &&
           "text-destructive",
         modifier === "outline" && variant === "primary" && "text-primary",
 
         modifier === "plain" &&
-          "shadow-none bg-transparent border-none px-2 py-1 text-sm",
+          "border-none bg-transparent px-2 py-1 text-sm shadow-none",
         modifier === "plain" && variant === "destructive" && "text-destructive",
         modifier === "plain" && variant === "primary" && "text-primary",
 
@@ -91,7 +91,7 @@ export const Button = ({
         {children}
       </span>
       {loading && (
-        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 block w-4 h-4">
+        <span className="absolute left-1/2 top-1/2 block h-4 w-4 -translate-x-1/2 -translate-y-1/2">
           <svg
             className="animate-spin"
             viewBox="0 0 20 20"
